@@ -47,6 +47,35 @@
       </mediaobject>
     </section>
 
-    <xi:include href="included_section.xml" />
+   <section>
+      <title>Lists</title>
+      
+      <para>
+       <itemizedlist>
+        <listitem>
+          <para>items</para>
+        </listitem>
+        <listitem>
+          <para>in</para>
+        </listitem>
+        <listitem>
+          <para>lists</para>
+        </listitem>
+      </itemizedlist>
+    </para>
+    
+    </section>
+    
+    <section>
+      <title>legalese</title>
+      <legalnotice>
+       <para>
+         can put our license goop in a place like this
+       </para>
+      </legalnotice>
+     </section>
+     
+     <!-- and we can have each section (and deeper) in a tree structure and xinclude in -->
+     <xi:include href="included_section.xml" />
   </chapter>
 </book>
