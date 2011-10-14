@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book version="5.0" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <title>Jetty / the book</title>
+  </info>
+
+  <chapter>
+    <title>Jetty / the chapter</title>
+
+    <section>
+      <title>Version</title>
+      <para>The version of jetty this document refers to is <?eval ${project.version}?> which is a
+        value coming from the pom.xml being used to generate this.
+      </para>  
+      
+    </section>
+    
+    <section>
+      <title>Code</title>
+      <para>
+        We can get source highlighted as well, just need to get the right incantation.  We could 
+        write up something that would pull source from git if needed and drop into the right location
+        here before the execution of the docbook plugin so we could reference live source in this
+        way.
+      </para>
+      <programlisting language="java">
+        <xi:include  href="foo.java" parse="text"/>
+      </programlisting>
+    </section>
+
+    <section>
+      <title>Introduction</title>
+      <para>Welcome to the Jetty Documentation Wiki. Jetty is an open-source project providing an HTTP server, HTTP client, and javax.servlet container. This Jetty Wiki provides information about getting started with Jetty, basic configuration, specific features, optimization, security, JavaEE, monitoring, FAQs, help with troubleshooting, and more. It includes tutorials, howtos, videos, feature descriptions, and reference materials.</para>
+    </section>
+    
+    <section>
+      <title>Pictures</title>
+      <para>We can of course include images :)</para>
+      
+       <mediaobject>
+         <imageobject>
+           <imagedata fileref="jesse.jpg"></imagedata>
+          </imageobject>
+      </mediaobject>
+    </section>
+
+    <xi:include href="included_section.xml" />
+  </chapter>
+</book>
