@@ -10,14 +10,67 @@
   <chapter>
     <title>Jetty / the chapter</title>
 
+
     <section>
-      <title>Version</title>
-      <para>The version of jetty this document refers to is <?eval ${project.version}?> which is a
-        value coming from the pom.xml being used to generate this.
-      </para>  
-      
+      <title>Introduction</title>
+      <para>Welcome to the Jetty Documentation Wiki. Jetty is an open-source project providing an HTTP server, HTTP client, and javax.servlet container. This Jetty Wiki provides information about getting started with Jetty, basic configuration, specific features, optimization, security, JavaEE, monitoring, FAQs, help with troubleshooting, and more. It includes tutorials, howtos, videos, feature descriptions, and reference materials.</para>
     </section>
     
+    <section>
+      <title>Proposed Usage</title>
+      
+      <para>
+       <itemizedlist>
+        <listitem>
+          <para>raw content comes from developers (and the existing wiki)</para>
+        </listitem>
+        <listitem>
+          <para>developers can checkout the git project and create sections as features or changes to existing work, new documentaiton in other words</para>
+        </listitem>
+        <listitem>
+          <para>we can make an incoming directory in the structure here that developers commit new raw content to</para>
+        </listitem>
+        <listitem>
+          <para>shirley can be responsible for taking raw content and organizing into the chosen structure</para>
+        </listitem>
+        <listitem>
+          <para>we can all edit and update existing documentation, but new content generally goes to incoming</para>
+        </listitem>
+        <listitem>
+        </listitem>
+      </itemizedlist>
+      </para>
+      
+      <para>
+        Releasing is easy
+      
+        <itemizedlist>
+          <listitem>
+            <para>Note the Version section in the top toc, we have a way of injecting values into the generation</para>
+          </listitem>
+          <listitem>
+            <para>on release we update the pom.xml and set the version numbers, 6, 7 and 8 that the document covers</para>
+          </listitem>
+          <listitem>
+            <para>commit that and then we run normal maven release process</para>
+            <para>mvn release:prepare</para>
+            <para>mvn release:perform</para>
+          </listitem>
+          <listitem>
+            <para>we can consume the documentation from maven central while building out our distribution</para>
+          </listitem>
+          <listitem>
+            <para>we can also bundle up the html and deploy it to download.eclipse.org/jetty/documentation</para>
+          </listitem>
+        </itemizedlist>
+      </para>
+    </section>
+    
+   </chapter> 
+      
+   <chapter>
+      <title>Nifties</title>
+      
     <section>
       <title>Code</title>
       <para>
@@ -30,11 +83,17 @@
         <xi:include  href="foo.java" parse="text"/>
       </programlisting>
     </section>
-
+    
+    
     <section>
-      <title>Introduction</title>
-      <para>Welcome to the Jetty Documentation Wiki. Jetty is an open-source project providing an HTTP server, HTTP client, and javax.servlet container. This Jetty Wiki provides information about getting started with Jetty, basic configuration, specific features, optimization, security, JavaEE, monitoring, FAQs, help with troubleshooting, and more. It includes tutorials, howtos, videos, feature descriptions, and reference materials.</para>
+      <title>Version</title>
+      <para>The version of jetty this document refers to is <?eval ${project.version}?> which is a
+        value coming from the pom.xml being used to generate this.  We can inject all manner of external 
+        information in this same way.
+      </para>  
+      
     </section>
+  
     
     <section>
       <title>Pictures</title>
@@ -59,7 +118,7 @@
           <para>in</para>
         </listitem>
         <listitem>
-          <para>lists</para>
+          <para>lists are cool</para>
         </listitem>
       </itemizedlist>
     </para>
