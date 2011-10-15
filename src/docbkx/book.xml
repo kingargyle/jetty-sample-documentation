@@ -5,6 +5,56 @@
       xmlns:db="http://docbook.org/ns/docbook">
   <info>
     <title>Jetty / the book</title>
+    
+    <revhistory>
+      <revision>
+        <revnumber>1</revnumber>
+
+        <date>Oct 14 2011</date>
+
+        <authorinitials>DAC</authorinitials>
+
+        <revremark>A sample revision entry</revremark>
+      </revision>
+    </revhistory>
+
+    <authorgroup>
+      <author>
+        <firstname>Jesse</firstname>
+
+        <surname>McConnell</surname>
+
+        <affiliation>
+          <jobtitle>Super Genius</jobtitle>
+
+          <orgname>Intalio</orgname>
+
+          <address>1234 Somewehere, In, OZ<email> example@example.com </email>
+               </address>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>David</firstname>
+
+        <surname>Carver</surname>
+
+        <affiliation>
+          <jobtitle>Principle Software Engineer</jobtitle>
+
+          <orgname>Intalio</orgname>
+
+          <address>1234 Somewehere, Columbus, OH<email> example@example.com </email>
+               </address>
+        </affiliation>
+      </author>
+    </authorgroup>
+
+    <copyright>
+      <year>2011</year>
+
+      <holder>Intalio/Webtide</holder>
+    </copyright>
+    
   </info>
 
   <chapter>
@@ -67,8 +117,8 @@
     </section>
     
    </chapter> 
-      
-   <chapter>
+   
+   <chapter id="nifties">
       <title>Nifties</title>
       
     <section>
@@ -104,6 +154,15 @@
            <imagedata fileref="jesse.jpg"></imagedata>
           </imageobject>
       </mediaobject>
+      
+      <para>In addition you can control width, height, and placement</para>
+      
+      <mediaobject>
+        <imageobject>
+           <imagedata fileref="jesse.jpg" format="JPG" align="center" contentdepth="3in" contentwidth="5in" scalefit="1"/>
+        </imageobject>
+      </mediaobject>
+      
     </section>
 
    <section>
@@ -137,4 +196,226 @@
      <!-- and we can have each section (and deeper) in a tree structure and xinclude in -->
      <xi:include href="included_section.xml" />
   </chapter>
-</book>
+  <chapter>
+  	<title>Additional Goodies</title>
+  	
+    <section>
+      <title>Admonitions</title>
+
+      <para>DocBook supports a varitety of Admonitions. Admonitions are used
+      to draw attention to a particular document. They include:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>tip</para>
+        </listitem>
+
+        <listitem>
+          <para>note</para>
+        </listitem>
+
+        <listitem>
+          <para>caution</para>
+        </listitem>
+
+        <listitem>
+          <para>warning</para>
+        </listitem>
+
+        <listitem>
+          <para>important</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>For example, see <xref linkend="exam_uniqueid" />.</para>
+
+      <para><example id="exam_uniqueid">
+          <title>Tip Admonition</title>
+
+          <para><programlisting>&lt;para&gt;
+ &lt;important&gt;
+   &lt;title&gt;Update this Article&lt;/title&gt;
+
+   &lt;para&gt;Committers/Community members are encouraged to update this article and use it as
+         a learning guide. It will only be improved if you make it
+         better.&lt;/para&gt;
+ &lt;/important&gt;
+&lt;/para&gt;
+</programlisting></para>
+        </example><important>
+          <title>Update this Article</title>
+
+          <para>Committers/Community members are encouraged to update this article and use it as
+         a learning guide. It will only be improved if you make it
+         better.</para>
+        </important></para>
+    </section>
+    
+    <section>
+      <title>Figures/Illustrations</title>
+
+      <para>An example of a figure and what it attributes need to filled
+      in.</para>
+
+      <figure id="fig_uniequeid">
+        <title>Title Figure</title>
+
+        <mediaobject>
+          <imageobject>
+           <imagedata fileref="jesse.jpg" format="JPG" align="center" contentdepth="3in" contentwidth="5in" scalefit="1"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      
+      <para>You can also cross reference a figure. For example see <xref
+      linkend="fig_uniequeid" /></para>
+      
+    </section>
+    
+      <section>
+        <title>Indexterm</title>
+
+        <para>Indexterms are used to define the terms that will appear in the
+        index that is generated. You should always have at least a primary
+        term, and you can have more than one. Optional is the secondary
+        term.</para>
+
+        <example>
+          <title>Indexterm</title>
+
+          <programlisting>&lt;indexterm&gt;
+    &lt;primary&gt;start characters, changing&lt;/primary&gt;
+&lt;/indexterm&gt;
+&lt;indexterm&gt;
+    &lt;primary&gt;start tags&lt;/primary&gt;
+    &lt;secondary&gt;beginning&lt;/secondary&gt;
+&lt;/indexterm&gt;</programlisting>
+        </example>
+
+        <para><indexterm>
+            <primary>Indexterm</primary>
+
+            <secondary>primary, secondary</secondary>
+          </indexterm> They can be grouped for preference between primary and
+        secondary terms. More information can be found on usage of indexterms
+        in <ulink
+        url="http://www.sagehill.net/docbookxsl/GenerateIndex.html#Indexterms">DocBook
+        XSL: The Complete Guide</ulink>.</para>
+      </section>
+
+      <section>
+        <title>See Also</title>
+
+        <para>Indexterms have an optional element called
+        <emphasis>seealso</emphasis>. This allows you to reference other
+        indexterms that may be relevant to the reader.</para>
+
+        <example>
+          <title>Seealso</title>
+
+          <programlisting>&lt;indexterm&gt;
+    &lt;primary&gt;start tags&lt;/primary&gt;
+    &lt;secondary&gt;beginning&lt;/secondary&gt;
+    &lt;seealso&gt;ending&lt;/seealso&gt;
+&lt;/indexterm&gt;</programlisting>
+        </example>
+     </section>
+     <section>
+     	<title>Tables</title>
+     	
+		<table frame='all'>
+			<tgroup cols='3' align='left' colsep='1' rowsep='1'>
+				<colspec colnum="1" colname="col1" colwidth=".25*" />
+				<colspec colnum="2" colname="col2" colwidth="3*" />
+				<colspec colnum="3" colname="col3" colwidth="1*" />
+				<thead>
+					<row>
+						<entry namest="col1" nameend="col2" align="left">Multi ColSpan</entry>
+						<entry colname="col4">Column</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry namest="col1" nameend="col3" align="left">
+							<emphasis role='bold'> full column span, aligned left
+							</emphasis>
+						</entry>
+					</row>
+					<row>
+						<entry />
+						<entry>No entry first column, entry middle
+						</entry>
+						<entry>Column</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+     </section>   
+  </chapter>
+	<glossary id="Glossary">
+	  <title>Glossary</title>
+	
+	  <glossdiv>
+	    <title>*</title>
+	
+	    <glossentry id="gBaseT1000">
+	      <glossterm>1000BaseT</glossterm>
+	
+	      <glossdef>
+	        <para>IEEE 802.3 physical layer specification for 1000Mbps Ethernet
+	        over two pairs of category 5 UTP wire.</para>
+	      </glossdef>
+	    </glossentry>
+	
+	    <glossentry id="gBaseT100">
+	      <glossterm>100BaseT</glossterm>
+	
+	      <glossdef>
+	        <para>IEEE 802.3 physical layer specification for 100Mbps Ethernet
+	        over two pairs of category 5 UTP wire.</para>
+	      </glossdef>
+	    </glossentry>
+	
+	    <glossentry id="gTenBase2">
+	      <glossterm>10Base2</glossterm>
+	
+	      <glossdef>
+	        <para>IEEE 802.3 physical-layer specification for 10Mbps ethernet over
+	        thin coaxial cable. Commonly referred to as thinnet.</para>
+	      </glossdef>
+	    </glossentry>
+	  </glossdiv>
+	</glossary>
+	
+	<bibliography>
+	  <title>Normative References</title>
+	
+	  <biblioentry id="Ref_Full_Backups">
+	    <abbrev>Backup4All2009</abbrev>
+	 	<publisher>
+	      <publishername>backup4All.com</publishername>
+	    </publisher>
+	
+	    <title><ulink
+	    url="http://www.backup4all.com/kb/full-backup-116.html">Full backup</ulink></title>
+	
+	    <pubdate>2009</pubdate>
+	
+	  </biblioentry>
+	  
+	  <biblioentry id="Ref_Interim_Backups">
+	    <abbrev>Backup4All2009</abbrev>
+	 	<publisher>
+	      <publishername>backup4All.com</publishername>
+	    </publisher>
+	
+	    <title><ulink
+	    url="http://www.backup4all.com/kb/incremental-backup-118.html">Incremental backup</ulink></title>
+	
+	    <pubdate>2009</pubdate>
+	
+	  </biblioentry>
+	</bibliography>
+
+	<index/>
+  </book>
