@@ -195,6 +195,8 @@
      
      <!-- and we can have each section (and deeper) in a tree structure and xinclude in -->
      <xi:include href="included_section.xml" />
+     
+     <xi:include href="feature/logging/feature.xml"/>
   </chapter>
   <chapter>
   	<title>Additional Goodies</title>
