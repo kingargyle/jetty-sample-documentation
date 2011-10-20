@@ -5,8 +5,8 @@
   <artifactId>jetty-documentation</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>Docbkx Maven Quikstart Archetype</name>
-  <packaging>pom</packaging>
-
+  <packaging>pom</packaging >
+     
   <build>
     <plugins>
       <plugin>
