@@ -35,7 +35,10 @@
           <xincludeSupported>true</xincludeSupported>
           <paperType>A4</paperType>
           <chunkedOutput>true</chunkedOutput>
+          <admonGraphics>1</admonGraphics>
+          <admonGraphicsPath>${basedir}/src/docbkx/</admonGraphicsPath>
           <fop1Extensions>1</fop1Extensions>
+          
 
           <foCustomization>src/docbkx-stylesheet/fo/docbook.xsl</foCustomization>
           <highlightSource>true</highlightSource>

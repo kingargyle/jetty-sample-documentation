@@ -50,15 +50,15 @@
         </listitem>
       </itemizedlist>
       
-    <para>NOTICE: now this a minor difference between versions so I would maybe opt to have this render
-    into a sort of wiki tip box layout and have larger changes between versions render out to this whole section difference.</para>
+    <note><para>Now this a minor difference between versions so I would maybe opt to have this render
+    into a sort of wiki tip box layout and have larger changes between versions render out to this whole section difference.</para></note>
 	
 	<xi:include href="7.2.4-7.5.3/system-properties.xml"/>
 	<xi:include href="7.0.0-7.2.3/system-properties.xml"/>
 	<xi:include href="6/system-properties.xml"/>
 
-    <para>NOTICE: long story short, if the docs change between versions we decide if its a big change or a little change and follow
+    <note><para>Long story short, if the docs change between versions we decide if its a big change or a little change and follow
     this procedure to capture that change.  If you really want to just do away with the old information at that point, just comment out the xi:include and 
-    it wouldn't get picked up, but the old documentation would still linger until someone decides to just delete it.</para>
+    it wouldn't get picked up, but the old documentation would still linger until someone decides to just delete it.</para></note>
 
 </section>
