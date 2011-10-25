@@ -19,6 +19,7 @@
             <id>documentation identifier</id>
             <phase>compile</phase>
             <goals>
+              <goal>generate-html</goal>
               <goal>generate-xhtml</goal>
               <goal>generate-pdf</goal>
             </goals>
@@ -41,7 +42,9 @@
           
 
           <foCustomization>src/docbkx-stylesheet/fo/docbook.xsl</foCustomization>
-          <highlightSource>true</highlightSource>
+          <htmlCustomization>src/docbkx-stylesheet/html/docbook.xsl</htmlCustomization>
+          <xhtmlCustomization>src/docbkx-stylesheet/xhtml/docbook.xsl</xhtmlCustomization>
+          <highlightSource>1</highlightSource>
           <customizationParameters>
             <!-- additional XSLT parameters-->
             <parameter>
@@ -82,7 +85,7 @@
           <dependency>
             <groupId>net.sf.xslthl</groupId>
             <artifactId>xslthl</artifactId>
-            <version>2.0.1</version>
+            <version>2.0.2</version>
             <scope>runtime</scope>
           </dependency>
           <dependency>
